@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Seminar Nasional Teknologi 2026</title>
+</head>
+<body>
+    <figure>
+                    <img src="logo perbanas.png" width="100">
+                    <figcaption></figcaption>
+
+    <!-- KEPALA HALAMAN -->
+    <header>
+        <h1>Seminar Nasional Teknologi 2026</h1>
+        <p>Inovasi Kecerdasan Buatan dan Pengembangan Web Modern</p>
+    </header>
+
+    <!-- MENU NAVIGASI -->
+    <nav>
+        <a href="#deskripsi">Deskripsi</a> | 
+        <a href="#jadwal">Jadwal Acara</a> | 
+        <a href="#pendaftaran">Formulir Pendaftaran</a> | 
+        <a href="https://www.perbanas.ac.id" target="_blank" rel="noopener noreferrer">Website Perbanas</a>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
+    <main>
+        <!-- SEKSI DESKRIPSI KEGIATAN -->
+        <section id="deskripsi">
+            <h2>Deskripsi Kegiatan</h2>
+            <article>
+                <h3>Tentang Seminar</h3>
+                <p>
+                    Seminar ini membahas tren terbaru dalam pengembangan perangkat lunak, kecerdasan buatan, 
+                    serta penerapan teknologi web masa kini untuk mempersiapkan mahasiswa menghadapi industri digital.
+                </p>
+                
+                <!-- GAMBAR DENGAN KETERANGAN -->
+                <figure>
+                    <img src="Seminar = workshop.jpg" alt="Suasana Seminar Kampus" width="500">
+                    <figcaption>Suasana pelaksanaan Seminar Nasional Teknologi di Auditorium Kampus.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- SEKSI JADWAL ACARA (TABEL) -->
+        <section id="jadwal">
+            <h2>Jadwal Kegiatan</h2>
+            <table border="1">
+                <caption>Rangkaian Acara Seminar Nasional</caption>
+                <thead>
+                    <tr>
+                        <th>Waktu</th>
+                        <th>Nama Kegiatan</th>
+                        <th>Pemateri / Penanggung Jawab</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08.00 - 08.30</td>
+                        <td>Registrasi Peserta & Pembukaan</td>
+                        <td>Panitia Pelaksana</td>
+                    </tr>
+                    <tr>
+                        <td>09.00 - 10.30</td>
+                        <td>Sesi 1: Keynote - Masa Depan AI di Indonesia</td>
+                        <td>Pakar AI Nasional</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 12.00</td>
+                        <td>Sesi 2: Web Semantik & HTML5 Advanced</td>
+                        <td>Heri Supriyanto, M.Kom.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total Durasi Kegiatan</td>
+                        <td>4 Jam</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- SEKSI FORMULIR PENDAFTARAN -->
+        <section id="pendaftaran">
+            <h2>Formulir Pendaftaran</h2>
+            <form action="proses.php" method="post">
+                
+                <div>
+                    <label for="nama">Nama Lengkap:</label><br>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+                <br>
+
+                <div>
+                    <label for="nim">NIM:</label><br>
+                    <input type="number" id="nim" name="nim" required>
+                </div>
+                <br>
+
+                <div>
+                    <label for="email">Alamat Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <br>
+
+                <div>
+                    <label for="telepon">Nomor Telepon:</label><br>
+                    <input type="tel" id="telepon" name="telepon" required>
+                </div>
+                <br>
+
+                <div>
+                    <label for="prodi">Program Studi:</label><br>
+                    <select id="prodi" name="prodi" required>
+                        <option value="">-- Pilih Program Studi --</option>
+                        <option value="si">Sistem Informasi</option>
+                        <option value="ti">Teknik Informatika</option>
+                        <option value="bd">Desain Komunikasi Visual</option>
+                    </select>
+                </div>
+                <br>
+
+                <!-- JENIS KELAMIN (RADIO BUTTON) -->
+                <fieldset>
+                    <legend>Jenis Kelamin</legend>
+                    <input type="radio" id="laki-laki" name="jenis_kelamin" value="L" required>
+                    <label for="laki-laki">Laki-laki</label>
+                    
+                    <input type="radio" id="perempuan" name="jenis_kelamin" value="P" required>
+                    <label for="perempuan">Perempuan</label>
+                </fieldset>
+                <br>
+                <!-- TANGGAL / BULAN / TAHUN (date input type) -->
+                <fieldset> 
+                    <legend>Tanggal / Bulan / Tahun</legend>
+                </form>
+                <input type="date">
+                </fieldset> 
+                <div>
+                    <label for="alasan">Alasan Mengikuti Kegiatan:</label><br>
+                    <textarea id="alasan" name="alasan" rows="4" cols="40" required></textarea>
+                </div>
+                <br>
+
+                <!-- PERSETUJUAN (CHECKBOX) -->
+                <div>
+                    <input type="checkbox" id="setuju" name="setuju" value="ya" required>
+                    <label for="setuju">Saya menyetujui seluruh ketentuan dan syarat kegiatan seminar ini.</label>
+                </div>
+                <br>
+
+                <button type="submit">Kirim Pendaftaran</button>
+            </form>
+        </section>
+
+        <!-- ASIDE (PENGUMUMAN / INFORMASI TAMPILAN) -->
+        <aside>
+            <h3>Pengumuman Tambahan</h3>
+            <p>Peserta diharapkan hadir 15 menit sebelum acara dimulai.</p>
+        </aside>
+    </main>
+
+    <!-- KAKI HALAMAN -->
+    <footer>
+        <p>&copy; 2026 Panitia Seminar Kampus - Program Studi Sistem Informasi</p>
+    </footer>
+
+</body>
+</html>
